@@ -8,8 +8,13 @@ body {background-color:lightslategrey;}
 a {margin-right: 50px;
    color:teal}
 a:hover {color: blue;}
-a:active {color:darkblue;}
 main {font-size:25px;
       margin-left: 50px;
-      margin-right: 42px}
-    
+      margin-right: 42px;}
+      
+img {width:25vw;
+     min-width:140px;}
+
+p {margin-top:5px;
+   margin-bottom:5px;}
+.active {color: lightblue;}   
