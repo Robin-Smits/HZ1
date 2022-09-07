@@ -5,7 +5,9 @@
         text-align:center;
         position:fixed;
         top: 7px;
-        width: 100%;}
+        width: 100%;
+        margin-bottom: 5px;}
+        
 body {background-color:lightslategrey;}
 
 a {margin-right: 50px;
@@ -31,3 +33,4 @@ aside {background-color: rgb(0, 0, 91);
 hr {height: 8px;
     background-color: lightslategray;
     border-color: lightslategray;}
+.main {margin-top: 20px;}
