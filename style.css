@@ -13,7 +13,8 @@ a {margin-right: 50px;
 a:hover {color: blue;}
 
 main {margin-left: 50px;
-      margin-right: 42px;}
+      margin-right: 42px;
+      margin-top:10px;}
       
 img {width: 25vw;
      min-width: 140px;}
