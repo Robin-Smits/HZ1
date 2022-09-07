@@ -7,9 +7,11 @@
         top: 7px;
         width:100%;}
 body {background-color:lightslategrey;}
+
 a {margin-right: 50px;
    color:teal}
 a:hover {color: blue;}
+
 main {font-size:25px;
       margin-left: 50px;
       margin-right: 42px;}
@@ -19,7 +21,10 @@ img {width:25vw;
 
 p {margin-top:5px;
    margin-bottom:5px;}
+
 .active {color: lightblue;}   
+
 aside {background-color: rgb(0, 0, 91);
         color:lightgrey;
         font-size:15px; }
+.blog {}
