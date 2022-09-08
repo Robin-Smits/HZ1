@@ -82,3 +82,16 @@ hr {    height: 5px;
         outline-color:black;
         outline-width:2px;
         background-color: rgb(230, 197, 154);}
+table, th, tr   {width: 85%;
+        border-collapse: collapse;
+        border-color:black;
+        border: 2px solid}
+footer  {background-color: rgb(0, 0, 91);
+        font-family: Arial, Helvetica, sans-serif;
+        color: lightgray;
+        text-align: center;
+        width: 100%;
+        position:sticky;
+        margin-bottom:-20px;
+        }
+        
