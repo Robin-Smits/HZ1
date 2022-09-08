@@ -1,38 +1,65 @@
-.menu {background-color: rgb(0, 0, 91);
+.menu {
+        background-color: rgb(0, 0, 91);
         font-family: Arial, Helvetica, sans-serif;
         color: lightgray;
         margin: -8px;
-        text-align:center;
-        position:fixed;
+        text-align: center;
+        position: fixed;
         top: 7px;
         width: 100%;
-        margin-bottom: 5px;}
-        
-body {background-color:lightslategrey;}
+        margin-bottom: 5px;
+}
 
-a {margin-right: 50px;
-   color:teal}
-a:hover {color: blue;}
+body {
+        background-color: lightslategrey;
+}
 
-main {margin-left: 50px;
-      margin-right: 42px;
-      margin-top:10px;}
-      
-img {width: 25vw;
-     min-width: 140px;}
+a {
+        margin-right: 50px;
+        color: teal
+}
 
-p {margin-top: 5px;
-   margin-bottom: 5px;}
+a:hover {
+        color: blue;
+}
 
-.active {color: lightblue;}   
+main {
+        margin-left: 50px;
+        margin-right: 42px;
+        margin-top: 10px;
+}
 
-aside {background-color: rgb(0, 0, 91);
+img {
+        width: 25vw;
+        min-width: 140px;
+}
+
+p {
+        margin-top: 5px;
+        margin-bottom: 5px;
+}
+
+.active {
+        color: lightblue;
+}
+
+aside {
+        background-color: rgb(0, 0, 91);
         color: lightgrey;
-        font-size: 15px; }
-      
-hr {height: 8px;
-    background-color: lightslategray;
-    border-color: lightslategray;}
-.main {margin-top: 20px;}
-.img {margin-left: 50;
-        margin-right:50;}
+        font-size: 15px;
+}
+
+hr {
+        height: 8px;
+        background-color: lightslategray;
+        border-color: lightslategray;
+}
+
+.main {
+        margin-top: 20px;
+}
+
+.img {
+        margin-left: 50;
+        margin-right: 50;
+}
