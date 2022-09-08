@@ -24,9 +24,9 @@ a:hover {
 }
 
 main {
-        margin-left: 50px;
+        margin-left: 16%;
         margin-right: 42px;
-        margin-top: 10px;
+        margin-top: 100px;
 }
 
 img {
@@ -43,22 +43,41 @@ p {
         color: lightblue;
 }
 
-aside {
+.aside {
         background-color: rgb(0, 0, 91);
         color: lightgrey;
         font-size: 15px;
+        position: fixed;
+        width: 15%;
+        height: 100%;
+        margin-left: -8px;
+        margin-right: 100%;
+        max-width: 100%;
+        margin-top: -5px;
 }
+aside { background-color: rgb(0, 0, 91);
+        color: lightgrey;
+        font-size: 15px;
+        position: fixed;
+        width: 15%;
+        height: 100%;
+        margin-left: -8px;
+        margin-top: -100px;}
 
 hr {    height: 2px;
-        background-color: lime;
-        border-color: lightslategray;
+        background-color: darkgray;
+        border-color: black;
 }
 
 .main {
-        margin-top: 50px;
+        margin-top: 90px;
+        width: 85%;
 }
 
 .img {
         margin-left: 50;
         margin-right: 50;
 }
+.blogs {outline-style:solid;
+        outline-color:black;
+        outline-width:2px;}
