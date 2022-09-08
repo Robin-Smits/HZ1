@@ -27,6 +27,7 @@ main {
         margin-left: 16%;
         margin-right: 42px;
         margin-top: 50px;
+        width: 80%;
 }
 
 img {
@@ -71,7 +72,7 @@ hr {    height: 5px;
 
 .main {
         margin-top: 90px;
-        width: 85%;
+        width: 80%;
 }
 
 .img {
@@ -90,8 +91,8 @@ footer  {background-color: rgb(0, 0, 91);
         font-family: Arial, Helvetica, sans-serif;
         color: lightgray;
         text-align: center;
+        margin-bottom: -16px;
         width: 100%;
-        position:sticky;
-        margin-bottom:-20px;
+        position:static;
         }
         
