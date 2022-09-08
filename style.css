@@ -49,14 +49,13 @@ aside {
         font-size: 15px;
 }
 
-hr {
-        height: 8px;
-        background-color: lightslategray;
+hr {    height: 2px;
+        background-color: lime;
         border-color: lightslategray;
 }
 
 .main {
-        margin-top: 20px;
+        margin-top: 50px;
 }
 
 .img {
