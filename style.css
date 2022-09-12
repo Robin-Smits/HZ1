@@ -91,10 +91,7 @@ hr {
         background-color: rgb(230, 197, 154);
 }
 
-table,
-th,
-tr,
-td {
+table, th, tr, td {
         width: 85%;
         border-collapse: collapse;
         border-color: black;
