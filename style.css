@@ -105,6 +105,8 @@ tr {
         text-align: center;
         border-collapse: collapse;
         border: 2px solid black;
+        padding-top: 25px;
+        padding-bottom: 50px;
         
 
 }
