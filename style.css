@@ -16,7 +16,7 @@ body {
 
 a {
         margin-right: 50px;
-        color: teal
+        color: lightblue
 }
 
 a:hover {
@@ -49,7 +49,7 @@ p {
 }
 
 .active {
-        color: lightblue;
+        color: teal;
 }
 
 .aside {
