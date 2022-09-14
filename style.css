@@ -116,6 +116,9 @@ footer {
         width: 100%;
         position: static;
 }
-.laadbalkkleur {color: blue;
-                height: 25px;
-                width: 500px;}
+
+.laadbalkkleur {
+        color: blue;
+        height: 25px;
+        width: 500px;
+}
