@@ -123,3 +123,7 @@ footer {
 }
 iframe {width: 420;
         height: 315;}
+.linkbutton {background-color: darkblue;
+            outline-style: solid;
+          outline-color: black;
+          outline-width: 2px;}
