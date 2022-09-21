@@ -15,7 +15,7 @@
 }
 
 body {
-        background-color: lightslategrey;
+        background-color: lightslategray;
         padding-top: 15px;
 }
 
@@ -57,7 +57,7 @@ p {
 .active {
         color: lightblue;
         outline-style: solid;
-        outline-color: lightgray;
+        outline-color: rgb(230, 197, 154);
         outline-width: 2px;
         padding: 5px;
 }
@@ -151,13 +151,13 @@ iframe {
         outline-style: solid;
         outline-color: lightgray;
         outline-width: 2px;
-        padding: 5px;
+        padding: 0.5px;
 }
 
 /* buttons */
 .navbutton {
         outline-style: solid;
-        outline-color: lightgray;
+        outline-color: rgb(230, 197, 154);
         outline-width: 2px;
         padding: 5px;
         background-color: rgb(0, 0, 91)
