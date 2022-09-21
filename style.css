@@ -21,7 +21,8 @@ body {
 
 a {
         margin-right: 50px;
-        color: rgb(43, 165, 213)}
+        color: rgb(43, 165, 213)
+}
 
 a:hover {
         color: rgb(230, 197, 154);
@@ -55,6 +56,10 @@ p {
 
 .active {
         color: lightblue;
+        outline-style: solid;
+        outline-color: lightgray;
+        outline-width: 2px;
+        padding: 5px;
 }
 
 .aside-index {
@@ -67,7 +72,7 @@ p {
         margin-left: -8px;
         margin-right: 100%;
         max-width: 100%;
-        margin-top: -25px;
+        margin-top: 74px;
 }
 
 aside {
@@ -135,13 +140,25 @@ footer {
         height: 25px;
         width: 500px;
 }
-iframe {width: 420;
-        height: 315;}
-.linkbutton {color: white}
 
-/* buttons toevoegen */
-.button {outline-style: solid;
-        outline-color: black;
+iframe {
+        width: 420;
+        height: 315;
+}
+
+.linkbutton {
+        color: white;
+        outline-style: solid;
+        outline-color: lightgray;
         outline-width: 2px;
-        background-color: lightblue;
-        padding: 5px;}
+        padding: 5px;
+}
+
+/* buttons */
+.navbutton {
+        outline-style: solid;
+        outline-color: lightgray;
+        outline-width: 2px;
+        padding: 5px;
+        background-color: rgb(0, 0, 91)
+}
