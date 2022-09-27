@@ -164,4 +164,5 @@ iframe {
 }
 .flexbox {
         display: flex;
-        flex-direction: column;}
+        flex-direction: column;
+        padding-bottom: 5px;}
