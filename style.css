@@ -165,4 +165,4 @@ iframe {
 .flexbox {
         display: flex;
         flex-direction: column;
-        padding-bottom: 5px;}
+        padding: 5px;}
