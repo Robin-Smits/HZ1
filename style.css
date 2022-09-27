@@ -162,3 +162,6 @@ iframe {
         padding: 5px;
         background-color: rgb(0, 0, 91)
 }
+.flexbox {
+        display: flex;
+        flex-direction: column;}
