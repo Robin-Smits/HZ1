@@ -36,7 +36,7 @@ hr {
         height: 5px;
         background-color: darkgray;
         border-color: black;
-        margin: 10px;
+        margin: 11px;
 }
 
 table,
@@ -69,7 +69,7 @@ tr {
         outline-width: 2px;
 }
 
-.active {
+.activeNavButton {
         color: lightblue;
         outline-style: solid;
         outline-color: rgb(230, 197, 154);
