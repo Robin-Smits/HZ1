@@ -1,19 +1,4 @@
-.menu {
-        background-color: rgb(0, 0, 91);
-        font-family: Arial, Helvetica, sans-serif;
-        color: lightgray;
-        margin: -8px;
-        text-align: center;
-        position: fixed;
-        top: 7px;
-        width: 100%;
-        margin-bottom: 5px;
-        padding: 10px;
-        outline-style: solid;
-        outline-color: rgb(230, 197, 154);
-        outline-width: 2px;
-}
-
+/* elements */
 body {
         background-color: lightslategray;
         padding-top: 15px;
@@ -41,17 +26,47 @@ img {
         padding-left: 75px;
 }
 
-.img-home-code {
-        height: 364px;
-        width: 728px;
-        padding-left: 0px;
-}
-
-
 p {
         margin-top: 5px;
         margin-bottom: 5px;
         padding: 2.5px;
+}
+
+hr {
+        height: 5px;
+        background-color: darkgray;
+        border-color: black;
+        margin: 10px;
+}
+
+table,
+td,
+th,
+tr {
+        width: 85%;
+        background-color: rgb(230, 197, 154);
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+        border-collapse: collapse;
+        border: 2px solid black;
+}
+
+/* Pagina basis */
+.menu {
+        background-color: rgb(0, 0, 91);
+        font-family: Arial, Helvetica, sans-serif;
+        color: lightgray;
+        margin: -8px;
+        text-align: center;
+        position: fixed;
+        top: 7px;
+        width: 100%;
+        margin-bottom: 5px;
+        padding: 10px;
+        outline-style: solid;
+        outline-color: rgb(230, 197, 154);
+        outline-width: 2px;
 }
 
 .active {
@@ -60,6 +75,19 @@ p {
         outline-color: rgb(230, 197, 154);
         outline-width: 2px;
         padding: 5px;
+}
+
+footer {
+        background-color: rgb(0, 0, 91);
+        font-family: Arial, Helvetica, sans-serif;
+        color: lightgray;
+        text-align: center;
+        margin-bottom: -16px;
+        width: 100%;
+        position: static;
+        outline-style: solid;
+        outline-color: rgb(230, 197, 154);
+        outline-width: 2px;
 }
 
 .aside-index {
@@ -89,11 +117,12 @@ aside {
         outline-width: 2px;
 }
 
-hr {
-        height: 5px;
-        background-color: darkgray;
-        border-color: black;
-        margin: 10px;
+/* Classes */
+
+.img-home-code {
+        height: 364px;
+        width: 728px;
+        padding-left: 0px;
 }
 
 .main {
@@ -109,32 +138,6 @@ hr {
         padding: 5px;
 }
 
-table,
-td,
-th,
-tr {
-        width: 85%;
-        background-color: rgb(230, 197, 154);
-        padding-left: 5px;
-        padding-right: 5px;
-        text-align: center;
-        border-collapse: collapse;
-        border: 2px solid black;
-}
-
-footer {
-        background-color: rgb(0, 0, 91);
-        font-family: Arial, Helvetica, sans-serif;
-        color: lightgray;
-        text-align: center;
-        margin-bottom: -16px;
-        width: 100%;
-        position: static;
-        outline-style: solid;
-        outline-color: rgb(230, 197, 154);
-        outline-width: 2px;
-}
-
 .laadbalkkleur {
         color: blue;
         height: 25px;
@@ -146,12 +149,26 @@ iframe {
         height: 315;
 }
 
-.linkbutton {
-        color: white;
-        outline-style: solid;
-        outline-color: lightgray;
-        outline-width: 2px;
-        padding: 0.5px;
+.flexbox {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+}
+
+.brandlogo {
+        height: 40px;
+        width: 40px;
+        margin-left: 1565px;
+        margin-top: -25px;
+        position: fixed;
+}
+
+.brandlogo-index {
+        height: 105px;
+        width: 105px;
+        margin-left: 1500px;
+        margin-top: -25px;
+        position: fixed;
 }
 
 /* buttons */
@@ -162,23 +179,15 @@ iframe {
         padding: 5px;
         background-color: rgb(0, 0, 91)
 }
-.flexbox {
-        display: flex;
-        flex-direction: column;
-        padding: 5px;}
 
-.brandlogo {
-        height: 40px;
-        width: 40px;
-        margin-left: 1565px;
-        margin-top: -25px;
-        position: fixed;}
+.blogFaqButtons:hover {
+        color: black;
+}
 
-.brandlogo-index {
-                height: 105px;
-                width: 105px;
-                margin-left: 1500px;
-                margin-top: -25px;
-                position: fixed;}
-
-.blogFaqButtons:hover{color: black;}
+.linkbutton {
+        color: white;
+        outline-style: solid;
+        outline-color: lightgray;
+        outline-width: 2px;
+        padding: 0.5px;
+}
