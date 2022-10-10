@@ -67,12 +67,12 @@ p {
         color: lightgrey;
         font-size: 15px;
         position: fixed;
-        width: 15%;
+        width: 11%;
         height: 100%;
         margin-left: -8px;
         margin-right: 100%;
         max-width: 100%;
-        margin-top: 74px;
+        margin-top: 85px;
 }
 
 aside {
@@ -80,10 +80,10 @@ aside {
         color: lightgrey;
         font-size: 15px;
         position: fixed;
-        width: 15%;
+        width: 11%;
         height: 100%;
         margin-left: -8px;
-        margin-top: 7px;
+        margin-top: 17px;
         outline-style: solid;
         outline-color: rgb(230, 197, 154);
         outline-width: 2px;
@@ -175,8 +175,10 @@ iframe {
         position: fixed;}
 
 .brandlogo-index {
-                height: 40px;
-                width: 40px;
-                margin-left: 1565px;
+                height: 105px;
+                width: 105px;
+                margin-left: 1500px;
                 margin-top: -25px;
                 position: fixed;}
+
+.blogFaqButtons:hover{color: black;}
