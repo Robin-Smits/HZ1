@@ -8,3 +8,4 @@ black
 blue
 white
 background-color: darkgray;
+background-color: rgb(230, 197, 154)
