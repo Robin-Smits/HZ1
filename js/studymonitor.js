@@ -309,6 +309,22 @@ function makeTable() {
     //th5 elementen aanmaken
     td5 = document.createElement("td").innerHTML = '-';
     tr2.appendChild(td5);
+
+    //tr2 aanmaken
+    tr3 = document.createElement("tr")
+    tr3.appendChild(table);
+    //th6 elementen aanmaken
+    td6 = document.createElement("td").innerHTML = 'Program & carreer orientation';
+    tr3.appendChild(td6);
+    //th7 elementen aanmaken
+    td7 = document.createElement("td").innerHTML = '2,5';
+    tr3.appendChild(td7);
+    //th8 elementen aanmaken
+    td8 = document.createElement("td").innerHTML = 'assessment';
+    tr3.appendChild(td8);
+    //th9 elementen aanmaken
+    td9 = document.createElement("td").innerHTML = '-';
+    tr3.appendChild(td9);
 }
 
 makeTable()
