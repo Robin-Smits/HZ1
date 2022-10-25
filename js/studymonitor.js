@@ -310,21 +310,37 @@ function makeTable() {
     td5 = document.createElement("td").innerHTML = '-';
     tr2.appendChild(td5);
 
-    //tr2 aanmaken
+    //tr3 aanmaken
     tr3 = document.createElement("tr")
     tr3.appendChild(table);
     //th6 elementen aanmaken
-    td6 = document.createElement("td").innerHTML = 'Program & carreer orientation';
+    td6 = document.createElement("td").innerHTML = 'Computer Science Basics';
     tr3.appendChild(td6);
     //th7 elementen aanmaken
-    td7 = document.createElement("td").innerHTML = '2,5';
+    td7 = document.createElement("td").innerHTML = '5';
     tr3.appendChild(td7);
     //th8 elementen aanmaken
-    td8 = document.createElement("td").innerHTML = 'assessment';
+    td8 = document.createElement("td").innerHTML = 'Written exam';
     tr3.appendChild(td8);
     //th9 elementen aanmaken
     td9 = document.createElement("td").innerHTML = '-';
     tr3.appendChild(td9);
+
+    //tr4 aanmaken
+    tr4 = document.createElement("tr")
+    tr4.appendChild(table);
+    //th6 elementen aanmaken
+    td10 = document.createElement("td").innerHTML = 'Programming Basics';
+    tr4.appendChild(td10);
+    //th7 elementen aanmaken
+    td11 = document.createElement("td").innerHTML = '5';
+    tr4.appendChild(td11);
+    //th8 elementen aanmaken
+    td12 = document.createElement("td").innerHTML = 'Case study exam';
+    tr4.appendChild(td12);
+    //th9 elementen aanmaken
+    td13 = document.createElement("td").innerHTML = '-';
+    tr4.appendChild(td13);
 }
 
 makeTable()
