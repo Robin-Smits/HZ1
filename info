@@ -1,11 +1,48 @@
-kleuren rgb(230, 197, 154)
-rgb(0, 0, 91)
-rgb(43, 165, 213)
-lightblue
-lightslategrey
-darkgray
-black
-blue
-white
-background-color: darkgray;
-background-color: rgb(230, 197, 154)
+//table aanmaken
+table = document.createElement("table");
+src = document.getElementById("newTable");
+table.classList.add("border");
+src.appendChild(table);
+//tr1 aanmaken
+tr1 = document.createElement("tr");
+tr1.appendChild(table);
+//th1 elementen aanmaken
+th1 = document.createElement("th");
+tr1.appendChild(th1);
+//th2 elementen aanmaken
+th2 = document.createElement("th");
+tr1.appendChild(th2);
+//th3 elementen aanmaken
+th3 = document.createElement("th");
+tr1.appendChild(th3);
+//th4 elementen aanmaken
+th4 = document.createElement("th");
+tr1.appendChild(th4);
+//th5 elementen aanmaken
+th5 = document.createElement("th");
+tr1.appendChild(th5);
+//th6 elementen aanmaken
+th6 = document.createElement("th");
+tr1.appendChild(th6);
+for (i = 0; i < 6; i++) {
+    tr2 = document.createElement("tr");
+    table.appendChild(tr2);
+    //td1 elementen aanmaken
+    td1 = document.createElement("th");
+    tr2.appendChild(td1);
+    //th2 elementen aanmaken
+    td2 = document.createElement("th");
+    tr2.appendChild(td2);
+    //th3 elementen aanmaken
+    td3 = document.createElement("th");
+    tr2.appendChild(td3);
+    //th4 elementen aanmaken
+    td4 = document.createElement("th");
+    tr2.appendChild(td4);
+    //th5 elementen aanmaken
+    td5 = document.createElement("th");
+    tr2.appendChild(td5);
+    //th6 elementen aanmaken
+    td6 = document.createElement("th");
+    tr2.appendChild(td6);
+}

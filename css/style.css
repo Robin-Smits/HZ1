@@ -138,11 +138,21 @@ aside {
         padding: 5px;
 }
 
-.laadbalkkleur {
-        color: blue;
+.laadbalkstandaard{
         height: 25px;
         width: 500px;
 }
+.laadbalkUnderNBSA{
+        color: red;
+}
+
+.laadbalkJustAboveNBSA{
+        color: yellow;
+}
+.laadbalkSaveForNBSA{
+        color: blue;
+}
+
 
 iframe {
         width: 420;

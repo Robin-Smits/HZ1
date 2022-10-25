@@ -1,16 +1,21 @@
 // Prove that JavaScript is working in your browser. You may delete this.
 console.log('JavaScript is working!');
+
+let totalEC = 0;
+let myTotalEC = 0;
+let myEc = 0
+let TotaalEc = 0;
 const schoolYearOne = [
     {
-        quartile: [
+        kwartaal: [
             {
                 course: [{
                     name: 'Program & carreer orientation',
-                    cuCode: '',
+                    cuCode: 'CU75001V3',
                     exam: [
                         {
                             name: 'PCO Assesment',
-                            grade: '',
+                            grade: 7.8,
                             weight: 2.5,
                         }
                     ]
@@ -20,11 +25,11 @@ const schoolYearOne = [
             {
                 course: [{
                     name: 'Computer Science Basics',
-                    cuCode: '',
+                    cuCode: 'CU75002V2',
                     exam: [
                         {
                             name: 'Written exam',
-                            grade: '',
+                            grade: 9,
                             weight: 5,
                         }
                     ]
@@ -34,11 +39,11 @@ const schoolYearOne = [
             {
                 course: [{
                     name: 'Programming Basics',
-                    cuCode: '',
+                    cuCode: 'CU75003V1',
                     exam: [
                         {
                             name: 'Case study',
-                            grade: '',
+                            grade: 8,
                             weight: 5,
                         }
                     ]
@@ -49,21 +54,21 @@ const schoolYearOne = [
         ]
     },
     {
-        quartile: [
+        kwartaal: [
             {
                 course: [{
                     name: 'Object Orientated Programming',
-                    cuCode: '',
+                    cuCode: 'CU75004V1',
                     totalWeight: 10,
                     exam: [
                         {
                             name: 'Case study',
-                            grade: '',
+                            grade: 0,
                             weight: 5,
                         },
                         {
-                            name: 'Case study',
-                            grade: '',
+                            name: 'Project',
+                            grade: 0,
                             weight: 5,
                         }
                     ]
@@ -72,15 +77,15 @@ const schoolYearOne = [
             }]
     },
     {
-        quartile: [
+        kwartaal: [
             {
                 course: [{
                     name: 'Framework Development 1',
-                    cuCode: '',
+                    cuCode: 'CU7500',
                     exam: [
                         {
-                            name: 'PCO Assesment',
-                            grade: '',
+                            name: 'Case study',
+                            grade: 0,
                             weight: 5,
                         }
                     ]
@@ -90,22 +95,22 @@ const schoolYearOne = [
             {
                 course: [{
                     name: 'Framework Project 1',
-                    cuCode: '',
+                    cuCode: 'CU7500',
                     totalWeight: 10,
                     exam: [
                         {
                             name: 'Project',
-                            grade: '',
+                            grade: 0,
                             weight: 2.5,
                         },
                         {
                             name: 'Case study',
-                            grade: '',
+                            grade: 0,
                             weight: 2.5,
                         },
                         {
                             name: 'Report',
-                            grade: '',
+                            grade: 0,
                             weight: 2.5,
                         }
                     ]
@@ -115,26 +120,26 @@ const schoolYearOne = [
         ]
     },
     {
-        quartile: [
+        kwartaal: [
             {
                 course: [{
                     name: 'Framework Project 2',
-                    cuCode: '',
+                    cuCode: 'CU7500',
                     totalWeight: 10,
                     exam: [
                         {
                             name: 'Portfolio	',
-                            grade: '',
-                            weight: 2.5,
+                            grade: 0,
+                            weight: 5,
                         },
                         {
                             name: 'Project',
-                            grade: '',
+                            grade: 0,
                             weight: 2.5,
                         },
                         {
                             name: 'Assessment',
-                            grade: '',
+                            grade: 0,
                             weight: 2.5,
                         }
                     ]
@@ -143,15 +148,15 @@ const schoolYearOne = [
             }]
     },
     {
-        quartile: [
+        kwartaal: [
             {
                 course: [{
                     name: 'Portfolio',
-                    cuCode: '',
+                    cuCode: 'CU7500',
                     exam: [
                         {
                             name: 'Portfolio',
-                            grade: '',
+                            grade: 0,
                             weight: 12.5,
                         },
 
@@ -162,11 +167,11 @@ const schoolYearOne = [
             {
                 course: [{
                     name: 'Personality 1',
-                    cuCode: '',
+                    cuCode: 'CU7500',
                     exam: [
                         {
                             name: 'Portfolio',
-                            grade: '',
+                            grade: 0,
                             weight: 1.25,
                         },
 
@@ -177,11 +182,11 @@ const schoolYearOne = [
             {
                 course: [{
                     name: 'Personality 2',
-                    cuCode: '',
+                    cuCode: 'CU7500',
                     exam: [
                         {
                             name: 'Portfolio',
-                            grade: '',
+                            grade: 0,
                             weight: 1.25,
                         },
 
@@ -194,64 +199,60 @@ const schoolYearOne = [
 ]
 console.log(schoolYearOne);
 
-let totalEC = 0;
+function calculateMyEc (array){
 for (i = 0; i < schoolYearOne.length; i++) {
-    for (j = 0; i < schoolYearOne.quartaal[i].length; j++) {
-        for (k = 0; k < schoolYearOne.quartaal[i].length; k++) {
-            totalEC += schoolYearOne.quartaal[i].course[j].ec;
+    for (j = 0; j < schoolYearOne[i].kwartaal.length; j++) {
+        for (k = 0; k < schoolYearOne[i].kwartaal[j].course.length; k++) {
+            for (l = 0; l < schoolYearOne[i].kwartaal[j].course[k].exam.length; l++) {
+            totalEC += schoolYearOne[i].kwartaal[j].course[k].exam[l].weight;
+            console.log(`your Course= ${schoolYearOne[i].kwartaal[j].course[k].name}, your name= ${schoolYearOne[i].kwartaal[j].course[k].exam[l].name}& your weight =${schoolYearOne[i].kwartaal[j].course[k].exam[l].weight} & `);
+            if (schoolYearOne[i].kwartaal[j].course[k].exam[l].grade >= 5.5) {
+                myTotalEC += schoolYearOne[i].kwartaal[j].course[k].exam[l].weight;
+            }
+        }
         }
     }
 }
-
-function createGradeTable() {
-    //table aanmaken
-    table = document.createElement("table");
-    src = document.getElementById("GradeTable");
-    table.classList.add("border");
-    src.appendChild(table);
-    //tr1 aanmaken
-    tr1 = document.createElement("tr");
-    tr1.appendChild(table);
-    //th1 elementen aanmaken
-    th1 = document.createElement("th");
-    tr1.appendChild(th1);
-    //th2 elementen aanmaken
-    th2 = document.createElement("th");
-    tr1.appendChild(th2);
-    //th3 elementen aanmaken
-    th3 = document.createElement("th");
-    tr1.appendChild(th3);
-    //th4 elementen aanmaken
-    th4 = document.createElement("th");
-    tr1.appendChild(th4);
-    //th5 elementen aanmaken
-    th5 = document.createElement("th");
-    tr1.appendChild(th5);
-    //th6 elementen aanmaken
-    th6 = document.createElement("th");
-    tr1.appendChild(th6);
-    for (i = 0; i < 6; i++) {
-        tr2 = document.createElement("tr");
-        table.appendChild(tr2);
-        //td1 elementen aanmaken
-        td1 = document.createElement("th");
-        tr2.appendChild(td1);
-        //th2 elementen aanmaken
-        td2 = document.createElement("th");
-        tr2.appendChild(td2);
-        //th3 elementen aanmaken
-        td3 = document.createElement("th");
-        tr2.appendChild(td3);
-        //th4 elementen aanmaken
-        td4 = document.createElement("th");
-        tr2.appendChild(td4);
-        //th5 elementen aanmaken
-        td5 = document.createElement("th");
-        tr2.appendChild(td5);
-        //th6 elementen aanmaken
-        td6 = document.createElement("th");
-        tr2.appendChild(td6);
-    }
+console.log(totalEC);
+console.log(myTotalEC);
+return myTotalEC;
 }
-createGradeTable()
+myTotalEC = calculateMyEc (schoolYearOne);
+
+function updateProgressBar(array){
+    for (i = 0; i < schoolYearOne.length; i++) {
+        for (j = 0; j < schoolYearOne[i].kwartaal.length; j++) {
+            for (k = 0; k < schoolYearOne[i].kwartaal[j].course.length; k++) {
+                for (l = 0; l < schoolYearOne[i].kwartaal[j].course[k].exam.length; l++) {
+                    TotaalEc += schoolYearOne[i].kwartaal[j].course[k].exam[l].weight;
+                if (schoolYearOne[i].kwartaal[j].course[k].exam[l].grade >= 5.5) {
+                    myEc += schoolYearOne[i].kwartaal[j].course[k].exam[l].weight;
+                }
+            }
+            }
+        }
+    if (myEc == TotaalEc){
+    console.log(`Je hebt kwartaal ${i + 1} 100% voltooid`)
+    //set color to green
+    }
+    myEc = 0;
+    TotaalEc = 0;
+}
+whatsMyProgress = calculateMyEc (schoolYearOne);
+myProgress = (whatsMyProgress / totalEC)*100;
+if (myProgress >= 90){
+// set progressbar to myProgress
+laadbalkkleur = document.getElementById("laadbalk")
+laadbalkkleur.classList.add("laadbalkSaveForNBSA");
+}else if (myProgress < 90 && myProgress >= 75){
+    // set progressbar to myProgress
+laadbalkkleur = document.getElementById("laadbalk")
+laadbalkkleur.classList.add("laadbalkJustAboveNBSA");
+}else {
+    // set progressbar to myProgress
+laadbalkkleur = document.getElementById("laadbalk")
+laadbalkkleur.classList.add("laadbalkUnderNBSA");
+}
+}
+updateProgressBar(schoolYearOne);
 
