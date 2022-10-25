@@ -1,137 +1,209 @@
 // Prove that JavaScript is working in your browser. You may delete this.
 console.log('JavaScript is working!');
+const schoolYearOne = [
+    {
+        quartile: [
+            {
+                course: [{
+                    name: 'Program & carreer orientation',
+                    cuCode: '',
+                    exam: [
+                        {
+                            name: 'PCO Assesment',
+                            grade: '',
+                            weight: 2.5,
+                        }
+                    ]
+                },
+                ]
+            },
+            {
+                course: [{
+                    name: 'Computer Science Basics',
+                    cuCode: '',
+                    exam: [
+                        {
+                            name: 'Written exam',
+                            grade: '',
+                            weight: 5,
+                        }
+                    ]
+                },
+                ]
+            },
+            {
+                course: [{
+                    name: 'Programming Basics',
+                    cuCode: '',
+                    exam: [
+                        {
+                            name: 'Case study',
+                            grade: '',
+                            weight: 5,
+                        }
+                    ]
+                },
+                ]
+            }
 
-const schoolYearOne = [];
-const quartileOne = {};
-const quartileTwo = {};
-const quartileThree = {};
-const quartileFour = {};
-const Year1 = {};
-const WanneerDanOok = {};
+        ]
+    },
+    {
+        quartile: [
+            {
+                course: [{
+                    name: 'Object Orientated Programming',
+                    cuCode: '',
+                    totalWeight: 10,
+                    exam: [
+                        {
+                            name: 'Case study',
+                            grade: '',
+                            weight: 5,
+                        },
+                        {
+                            name: 'Case study',
+                            grade: '',
+                            weight: 5,
+                        }
+                    ]
+                },
+                ]
+            }]
+    },
+    {
+        quartile: [
+            {
+                course: [{
+                    name: 'Framework Development 1',
+                    cuCode: '',
+                    exam: [
+                        {
+                            name: 'PCO Assesment',
+                            grade: '',
+                            weight: 5,
+                        }
+                    ]
+                },
+                ]
+            },
+            {
+                course: [{
+                    name: 'Framework Project 1',
+                    cuCode: '',
+                    totalWeight: 10,
+                    exam: [
+                        {
+                            name: 'Project',
+                            grade: '',
+                            weight: 2.5,
+                        },
+                        {
+                            name: 'Case study',
+                            grade: '',
+                            weight: 2.5,
+                        },
+                        {
+                            name: 'Report',
+                            grade: '',
+                            weight: 2.5,
+                        }
+                    ]
+                },
+                ]
+            }
+        ]
+    },
+    {
+        quartile: [
+            {
+                course: [{
+                    name: 'Framework Project 2',
+                    cuCode: '',
+                    totalWeight: 10,
+                    exam: [
+                        {
+                            name: 'Portfolio	',
+                            grade: '',
+                            weight: 2.5,
+                        },
+                        {
+                            name: 'Project',
+                            grade: '',
+                            weight: 2.5,
+                        },
+                        {
+                            name: 'Assessment',
+                            grade: '',
+                            weight: 2.5,
+                        }
+                    ]
+                }
+                ]
+            }]
+    },
+    {
+        quartile: [
+            {
+                course: [{
+                    name: 'Portfolio',
+                    cuCode: '',
+                    exam: [
+                        {
+                            name: 'Portfolio',
+                            grade: '',
+                            weight: 12.5,
+                        },
 
-const pcoAssesment = {
-    name:'PCO Assesment',
-    grade:'',
-};
-const csbWrittenExam = {
-    name:'CSB Written Exam',
-    grade:'',
-};
-const pbaCaseStudy = {
-    name:'PBA Case Study',
-    grade:'',
-};
-const obpCaseStudy = {
-    name:'OBP Case Study',
-    grade:'',
-};
-const obpProject = {
-    name:'OBP Project',
-    grade:'',
-};
-const fd1CaseStudy = {
-    name:'FD1 Case Study',
-    grade:'',
-};
-const fp1Project = {
-    name:'FP1 Project',
-    grade:'',
-};
-const fp1CaseStudy = {
-    name:'FP1 Case Study',
-    grade:'',
-};
-const fp1Report = {
-    name:'FP1 Report',
-    grade:'',
-};
-const fp2Portfolio = {
-    name:'FP2 Portfolio',
-    grade:'',
-};
-const fp2Project = {
-    name:'FP2 Project',
-    grade:'',
-};
-const fp2Assessment = {
-    name:'FP2 Assessment',
-    grade:'',
-};
-const PortfolioPortfolio = {
-    name:'Portfolio',
-    grade:'',
-};
-const Personality1Portfolio = {
-    name:'Personality 1 Portfolio',
-    grade:'',
-};
-const Personality2Portfolio = {
-    name:'Personality 2 Portfolio',
-    grade:'',
-};
+                    ]
+                }
+                ]
+            },
+            {
+                course: [{
+                    name: 'Personality 1',
+                    cuCode: '',
+                    exam: [
+                        {
+                            name: 'Portfolio',
+                            grade: '',
+                            weight: 1.25,
+                        },
 
-const Q1PCO = {
-    name:'',
-    pcoAssesment,
-    CUCode:''};
-const Q1CSB = {
-    name:'',
-    csbWrittenExam,
-    CUCode:''};
-const Q1PBA = {
-    name:'',
-    pbaCaseStudy,
-    CUCode:''
-};
-const Q2OBP = {
-    name:'',
-    obpCaseStudy,
-    obpProject,
-    CUCode:''
-};
-const Q3FD1 = {
-    name:'',
-    fd1CaseStudy,
-    CUCode:''
-};
-const Q3FP1 = {
-    name:'',
-    fp1Project,
-    fp1CaseStudy,
-    fp1Report,
-    CUCode:''
-};
-const Q4FP2 = {
-    name:'',
-    fp2Portfolio,
-    fp2Project,
-    fp2Assessment,
-    CUCode:''
-};
-const portfolio = {
-    name:'',
-    PortfolioPortfolio,
-    CUCode:''
+                    ]
+                }
+                ]
+            },
+            {
+                course: [{
+                    name: 'Personality 2',
+                    cuCode: '',
+                    exam: [
+                        {
+                            name: 'Portfolio',
+                            grade: '',
+                            weight: 1.25,
+                        },
+
+                    ]
+                }
+                ]
+            }
+        ]
+    }
+]
+console.log(schoolYearOne);
+
+let totalEC = 0;
+for (i = 0; i < schoolYearOne.length; i++) {
+    for (j = 0; i < schoolYearOne.quartaal[i].length; j++) {
+        for (k = 0; k < schoolYearOne.quartaal[i].length; k++) {
+            totalEC += schoolYearOne.quartaal[i].course[j].ec;
+        }
+    }
 }
-const personality1 = {
-    name:'',
-    Personality1Portfolio,
-    CUCode:''
-}
-const personality2 = {
-    name:'',
-    Personality2Portfolio,
-    CUCode:''
-}
 
-//let totalEC = 0;
-//for (i = 0; i < schoolYearOne.length; i++){
-//    for (j = 0; i < schoolYearOne.quartaal[i].length; i++){
-        totalEC += schoolYearOne.quartaal[i].course[j].ec;
-//    }
-//}
-
-function createGradeTable (){
+function createGradeTable() {
     //table aanmaken
     table = document.createElement("table");
     src = document.getElementById("GradeTable");
@@ -158,28 +230,28 @@ function createGradeTable (){
     //th6 elementen aanmaken
     th6 = document.createElement("th");
     tr1.appendChild(th6);
-    for (i = 0; i < 6; i++){
-    tr2 = document.createElement("tr");
-    table.appendChild(tr2);
-    //td1 elementen aanmaken
-    td1 = document.createElement("th");
-    tr2.appendChild(td1);
-    //th2 elementen aanmaken
-    td2 = document.createElement("th");
-    tr2.appendChild(td2);
-    //th3 elementen aanmaken
-    td3 = document.createElement("th");
-    tr2.appendChild(td3);
-    //th4 elementen aanmaken
-    td4 = document.createElement("th");
-    tr2.appendChild(td4);
-    //th5 elementen aanmaken
-    td5 = document.createElement("th");
-    tr2.appendChild(td5);
-    //th6 elementen aanmaken
-    td6 = document.createElement("th");
-    tr2.appendChild(td6);
+    for (i = 0; i < 6; i++) {
+        tr2 = document.createElement("tr");
+        table.appendChild(tr2);
+        //td1 elementen aanmaken
+        td1 = document.createElement("th");
+        tr2.appendChild(td1);
+        //th2 elementen aanmaken
+        td2 = document.createElement("th");
+        tr2.appendChild(td2);
+        //th3 elementen aanmaken
+        td3 = document.createElement("th");
+        tr2.appendChild(td3);
+        //th4 elementen aanmaken
+        td4 = document.createElement("th");
+        tr2.appendChild(td4);
+        //th5 elementen aanmaken
+        td5 = document.createElement("th");
+        tr2.appendChild(td5);
+        //th6 elementen aanmaken
+        td6 = document.createElement("th");
+        tr2.appendChild(td6);
     }
 }
-createGradeTable ()
+createGradeTable()
 
