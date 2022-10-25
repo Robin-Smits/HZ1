@@ -5,6 +5,7 @@ let totalEC = 0;
 let myTotalEC = 0;
 let myEc = 0
 let TotaalEc = 0;
+const laadbalkkleur = document.getElementById("laadbalk");
 const schoolYearOne = [
     {
         kwartaal: [
@@ -29,7 +30,7 @@ const schoolYearOne = [
                     exam: [
                         {
                             name: 'Written exam',
-                            grade: 9,
+                            grade: 0,
                             weight: 5,
                         }
                     ]
@@ -43,7 +44,7 @@ const schoolYearOne = [
                     exam: [
                         {
                             name: 'Case study',
-                            grade: 8,
+                            grade: 0,
                             weight: 5,
                         }
                     ]
@@ -199,6 +200,19 @@ const schoolYearOne = [
 ]
 console.log(schoolYearOne);
 
+function makeProgressBarRed(){
+    laadbalk = document.getElementById("laadbalk")
+    laadbalk.classList.add("laadbalkUnderNBSA");
+}
+function makeProgressBarYellow(){
+    laadbalk = document.getElementById("laadbalk")
+    laadbalk.classList.add("laadbalkJustAboveNBSA");
+}
+function makeProgressBarBlue(){
+    laadbalk = document.getElementById("laadbalk")
+    laadbalk.classList.add("laadbalkSaveForNBSA");
+}
+
 function calculateMyEc (array){
 for (i = 0; i < schoolYearOne.length; i++) {
     for (j = 0; j < schoolYearOne[i].kwartaal.length; j++) {
@@ -238,21 +252,69 @@ function updateProgressBar(array){
     myEc = 0;
     TotaalEc = 0;
 }
-whatsMyProgress = calculateMyEc (schoolYearOne);
-myProgress = (whatsMyProgress / totalEC)*100;
+
+myProgress = (myTotalEC / totalEC) * 100;
 if (myProgress >= 90){
 // set progressbar to myProgress
-laadbalkkleur = document.getElementById("laadbalk")
-laadbalkkleur.classList.add("laadbalkSaveForNBSA");
+    makeProgressBarBlue()   
 }else if (myProgress < 90 && myProgress >= 75){
     // set progressbar to myProgress
-laadbalkkleur = document.getElementById("laadbalk")
-laadbalkkleur.classList.add("laadbalkJustAboveNBSA");
+    makeProgressBarYellow()
 }else {
     // set progressbar to myProgress
-laadbalkkleur = document.getElementById("laadbalk")
-laadbalkkleur.classList.add("laadbalkUnderNBSA");
+    makeProgressBarRed()
 }
 }
 updateProgressBar(schoolYearOne);
 
+function makeTable(){
+    //table aanmaken
+table = document.createElement("table");
+src = document.getElementById("newTable");
+table.classList.add("border");
+src.appendChild(table);
+//tr1 aanmaken
+tr1 = document.createElement("tr");
+tr1.appendChild(table);
+//th1 elementen aanmaken
+th1 = document.createElement("th");
+tr1.appendChild(th1);
+//th2 elementen aanmaken
+th2 = document.createElement("th");
+tr1.appendChild(th2);
+//th3 elementen aanmaken
+th3 = document.createElement("th");
+tr1.appendChild(th3);
+//th4 elementen aanmaken
+th4 = document.createElement("th");
+tr1.appendChild(th4);
+//th5 elementen aanmaken
+th5 = document.createElement("th");
+tr1.appendChild(th5);
+//th6 elementen aanmaken
+th6 = document.createElement("th");
+tr1.appendChild(th6);
+for (i = 0; i < 6; i++) {
+    tr2 = document.createElement("tr");
+    table.appendChild(tr2);
+    //td1 elementen aanmaken
+    td1 = document.createElement("th");
+    tr2.appendChild(td1);
+    //th2 elementen aanmaken
+    td2 = document.createElement("th");
+    tr2.appendChild(td2);
+    //th3 elementen aanmaken
+    td3 = document.createElement("th");
+    tr2.appendChild(td3);
+    //th4 elementen aanmaken
+    td4 = document.createElement("th");
+    tr2.appendChild(td4);
+    //th5 elementen aanmaken
+    td5 = document.createElement("th");
+    tr2.appendChild(td5);
+    //th6 elementen aanmaken
+    td6 = document.createElement("th");
+    tr2.appendChild(td6);
+}
+}
+makeTable()
