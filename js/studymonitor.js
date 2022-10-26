@@ -200,27 +200,7 @@ const schoolYearOne = [
   }
 ];
 console.log(schoolYearOne);
-/**
- * Functie die de laadbalk rood maakt
- */
-function makeProgressBarRed() {
-  laadbalk = document.getElementById('laadbalk');
-  laadbalk.classList.add('laadbalkUnderNBSA');
-}
-/**
- * functie die de laadbalk geel maakt
- */
-function makeProgressBarYellow() {
-  laadbalk = document.getElementById('laadbalk');
-  laadbalk.classList.add('laadbalkJustAboveNBSA');
-}
-/**
- * functie om laadbalk blauw te maken
- */
-function makeProgressBarBlue() {
-  laadbalk = document.getElementById('laadbalk');
-  laadbalk.classList.add('laadbalkSaveForNBSA');
-}
+
 /**
  * functie die je cijfers en ec verzamelt
  * @param {array} array de array die gecontrolleerd moet worden voor de cijfers en ec punten
@@ -232,7 +212,7 @@ function calculateMyEc(array) {
       for (k = 0; k < schoolYearOne[i].kwartaal[j].course.length; k++) {
         for (l = 0; l < schoolYearOne[i].kwartaal[j].course[k].exam.length; l++) {
           totalEC += schoolYearOne[i].kwartaal[j].course[k].exam[l].weight;
-          console.log(`your Course= ${schoolYearOne[i].kwartaal[j].course[k].name}, your name= ${schoolYearOne[i].kwartaal[j].course[k].exam[l].name}& your weight =${schoolYearOne[i].kwartaal[j].course[k].exam[l].weight} & `);
+          //console.log(`your Course= ${schoolYearOne[i].kwartaal[j].course[k].name}, your name= ${schoolYearOne[i].kwartaal[j].course[k].exam[l].name}& your weight =${schoolYearOne[i].kwartaal[j].course[k].exam[l].weight} & `);
           if (schoolYearOne[i].kwartaal[j].course[k].exam[l].grade >= 5.5) {
             myTotalEC += schoolYearOne[i].kwartaal[j].course[k].exam[l].weight;
           }
@@ -240,8 +220,8 @@ function calculateMyEc(array) {
       }
     }
   }
-  console.log(totalEC);
-  console.log(myTotalEC);
+  //console.log(totalEC);
+  //console.log(myTotalEC);
   return myTotalEC;
 }
 myTotalEC = calculateMyEc(schoolYearOne);
@@ -265,21 +245,29 @@ function updateProgressBar(array) {
       console.log(`Je hebt kwartaal ${i + 1} 100% voltooid`);
       // set color to green
     }
-    myProgress = (myEc / TotaalEc) * 100;
-    if (myProgress >= 90) {
-    // set progressbar to myProgress
-      makeProgressBarBlue();
-    } else if (myProgress < 90 && myProgress >= 75) {
-    // set progressbar to myProgress
-      makeProgressBarYellow();
-    } else {
-    // set progressbar to myProgress
-      makeProgressBarRed();
-    }
-    myEc = 0;
-    TotaalEc = 0;
+    
   }
-
+  myProgress = (myEc / TotaalEc) * 100;
+  if (myProgress >= 90) {
+    // set progressbar to myProgress
+    laadbalk = document.getElementById('laadbalk');
+    laadbalk.value = myProgress;
+    laadbalk.className = 'laadbalkSaveForNBSA';
+  }else if (myProgress < 90 && myProgress >= 75) {
+    // set progressbar to myProgress
+    laadbalk = document.getElementById('laadbalk');
+    laadbalk.value = myProgress;
+    laadbalk.className = 'laadbalkJustAboveNBSA';
+  }else if (myProgress < 75) {
+    // set progressbar to myProgress
+    laadbalk = document.getElementById('laadbalk');
+    laadbalk.value = myProgress;
+    laadbalk.className = 'laadbalkUnderNBSA';
+    console.log(myProgress);
+  }
+  myEc = 0;
+  TotaalEc = 0;
+  myProgress = 0;
 }
 updateProgressBar(schoolYearOne);
 
@@ -456,3 +444,4 @@ function makeSubExam (examEC, examTest, CourseGradeID, voltooidToetsID){
   td6.setAttribute('id',voltooidToetsID); // ID: voltooidToetsID
   tr.appendChild(td6);
 }
+
