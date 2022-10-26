@@ -1,0 +1,78 @@
+function summonInputBar(){
+  SubjectQuestion = document.getElementById('SubjectQuestion');
+  SubjectQuestionOutput = SubjectQuestion.options[SubjectQuestion.selectedIndex].text;
+
+  if (SubjectQuestionOutput == 'PCO'){
+    console.log('PCO werkt');
+  }else if (SubjectQuestionOutput == 'CSB'){
+    console.log('CSB werkt');
+  }else if (SubjectQuestionOutput == 'PBA'){
+    console.log('PBA werkt');
+  }
+}
+
+/**
+ * functie die de 3e vraag aanmaakt voor blok 3
+ */
+ function getThirdQuestion(){
+    SubjectQuestion = document.getElementById('SubjectQuestion');
+    SubjectQuestionOutput = SubjectQuestion.options[SubjectQuestion.selectedIndex].text;
+  
+    if (SubjectQuestionOutput == 'FD1-Case-Study'){
+      popUpP = document.createElement('p');
+      src = document.getElementById('addQuestionsHere');
+      popUpP.innerHTML = 'Kies welk voor welk vak u een cijfer wilt aanpassen';
+      src.appendChild(popUpP);
+    
+      question3Div = document.createElement('div');
+      src.appendChild(question3Div);
+    
+      question3P = document.createElement('p');
+      question3P.classList.add('forms');
+      question3P.innerHTML = 'Case-Study';
+      question3Div.appendChild(question3P);
+    
+      verderButton = document.createElement('input');
+      verderButton.type = 'button';
+      verderButton.addEventListener('click', summonInputBar);
+      verderButton.value = 'verder';
+      question3Div.appendChild(verderButton);
+    }else if (SubjectQuestionOutput == 'FP1'){
+      popUpP = document.createElement('p');
+      src = document.getElementById('addQuestionsHere');
+      popUpP.innerHTML = 'Kies welk voor welk vak u een cijfer wilt aanpassen';
+      src.appendChild(popUpP);
+    
+      question3Div = document.createElement('div');
+      src.appendChild(question3Div);
+    
+      question3Label = document.createElement('label');
+      question3Div.appendChild(question3Label);
+    
+      question3Select = document.createElement('select');
+      question3Select.name = 'blok';
+      question3Select.classList.add('forms');
+      question3Select.setAttribute('id', 'SubjectQuestion');
+      question3Div.appendChild(question3Select);
+    
+      question3Option1 = document.createElement('option');
+      question3Option1.value = 'fp1portfolio';
+      question3Option1.innerHTML = 'FP1-Portfolio';
+      question3Select.appendChild(question3Option1);
+    
+      question3Option2 = document.createElement('option');
+      question3Option2.value = 'fp1CaseStudy';
+      question3Option2.innerHTML = 'FP1-Case-Study';
+      question3Select.appendChild(question3Option2);
+  
+      question3Option3 = document.createElement('option');
+      question3Option3.value = 'fp1Assessment';
+      question3Option3.innerHTML = 'FP1-Assessment';
+      question3Select.appendChild(question3Option3);
+    
+      verderButton = document.createElement('input');
+      verderButton.type = 'button';
+      verderButton.addEventListener('click', summonInputBar);
+      verderButton.value = 'verder';
+      question3Div.appendChild(verderButton);
+    };}

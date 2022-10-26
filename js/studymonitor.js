@@ -314,8 +314,8 @@ function makeTableWithFunctions (){
   makeSubCourse ('Programming Basics	', 1, 5, 'Case study', 'pbaGrade', 'pbaComplete');
 
   // blok 2
-  makePeriod('2', 2, 'Object Orientated Programming', 2, 5, 'assessment', 'pcoGrade', 'pcoComplete');
-  makeSubExam (5, 'Case Study', 'oopGrade', 'oopComplete');
+  makePeriod('2', 2, 'Object Orientated Programming', 2, 5, 'assessment', 'oopAssessmentGrade', 'oopAssessmentComplete');
+  makeSubExam (5, 'Case Study', 'oopCaseStudyGrade', 'oopCaseStudyComplete');
   // blok 3
   makePeriod('3', 4, 'Framework Development 1', 1, 5, 'Case study', 'fd1Grade', 'fd1Complete');
   makeSubCourse ('Framework Project 1', 3, 2.5, 'Project', 'fp1ProjectGrade', 'fp1ProjectComplete');
@@ -463,6 +463,7 @@ function createPopUp(){
 
   popUpDiv = document.createElement('div');
   popUpDiv.classList.add('popUp-inhoud');
+  popUpDiv.setAttribute('id','addQuestionsHere');
   popUp.appendChild(popUpDiv);
   popUpSpan = document.createElement('span');
   popUpSpan.innerHTML = '&times;';
@@ -470,8 +471,52 @@ function createPopUp(){
   popUpDiv.appendChild(popUpSpan);
 
   popUpP = document.createElement('p');
-  popUpP.innerHTML = 'Hallo';
+  popUpP.innerHTML = 'Kies uit welk blok u een cijfer wilt aanpassen';
   popUpDiv.appendChild(popUpP);
+
+  question1Div = document.createElement('div');
+  popUpDiv.appendChild(question1Div);
+
+  question1Label = document.createElement('label');
+  question1Div.appendChild(question1Label);
+
+  question1Select = document.createElement('select');
+  question1Select.name = 'blok';
+  question1Select.classList.add('forms');
+  question1Select.setAttribute('id', 'blokQuestion');
+  question1Div.appendChild(question1Select);
+
+  question1Option1 = document.createElement('option');
+  question1Option1.value = 'blok1';
+  question1Option1.innerHTML = 'Blok1';
+  question1Select.appendChild(question1Option1);
+
+  question1Option2 = document.createElement('option');
+  question1Option2.value = 'blok2';
+  question1Option2.innerHTML = 'Blok2';
+  question1Select.appendChild(question1Option2);
+
+  question1Option3 = document.createElement('option');
+  question1Option3.value = 'blok3';
+  question1Option3.innerHTML = 'Blok3';
+  question1Select.appendChild(question1Option3);
+
+  question1Option4 = document.createElement('option');
+  question1Option4.value = 'blok4';
+  question1Option4.innerHTML = 'Blok4';
+  question1Select.appendChild(question1Option4);
+
+  question1Option5 = document.createElement('option');
+  question1Option5.value = 'blokOverig';
+  question1Option5.innerHTML = 'Overig';
+  question1Select.appendChild(question1Option5);
+
+  verderButton = document.createElement('input');
+  verderButton.type = 'button';
+  verderButton.addEventListener('click', getNextQuestion);
+  verderButton.value = 'verder';
+  question1Div.appendChild(verderButton);
+
 };
   
 createChangeButton();
@@ -494,32 +539,326 @@ window.onclick = function(event) {
     popUpMenu.style.display = 'none';
   }
 };
+/**
+ * functie die de input van de blok question ophaalt
+ */
+function getNextQuestion(){
+  blokQuestion = document.getElementById('blokQuestion');
+  blokQuestionOutput = blokQuestion.options[blokQuestion.selectedIndex].text;
 
-<label for="cars">Choose a car:</label>
-<select name="cars" id="cars">
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
-</select>
+  if (blokQuestionOutput == 'Blok1'){
+    popUpP = document.createElement('p');
+    src = document.getElementById('addQuestionsHere');
+    popUpP.innerHTML = 'Kies welk voor welk vak u een cijfer wilt aanpassen';
+    src.appendChild(popUpP);
+  
+    question2Div = document.createElement('div');
+    src.appendChild(question2Div);
+  
+    question2Label = document.createElement('label');
+    question2Div.appendChild(question2Label);
+  
+    question2Select = document.createElement('select');
+    question2Select.name = 'blok';
+    question2Select.classList.add('forms');
+    question2Select.setAttribute('id', 'SubjectQuestion');
+    question2Div.appendChild(question2Select);
+  
+    question2Option1 = document.createElement('option');
+    question2Option1.value = 'PCO';
+    question2Option1.innerHTML = 'PCO';
+    question2Select.appendChild(question2Option1);
+  
+    question2Option2 = document.createElement('option');
+    question2Option2.value = 'CSB';
+    question2Option2.innerHTML = 'CSB';
+    question2Select.appendChild(question2Option2);
+  
+    question2Option3 = document.createElement('option');
+    question2Option3.value = 'PBA';
+    question2Option3.innerHTML = 'PBA';
+    question2Select.appendChild(question2Option3);
+  
+    verderButton = document.createElement('input');
+    verderButton.type = 'button';
+    verderButton.addEventListener('click', summonInputBar);
+    verderButton.value = 'verder';
+    question2Div.appendChild(verderButton);
+  }else if (blokQuestionOutput == 'Blok2'){
+    popUpP = document.createElement('p');
+    src = document.getElementById('addQuestionsHere');
+    popUpP.innerHTML = 'Kies welk voor welk vak u een cijfer wilt aanpassen';
+    src.appendChild(popUpP);
+  
+    question2Div = document.createElement('div');
+    src.appendChild(question2Div);
+  
+    question2Label = document.createElement('label');
+    question2Div.appendChild(question2Label);
+  
+    question2Select = document.createElement('select');
+    question2Select.name = 'blok';
+    question2Select.classList.add('forms');
+    question2Select.setAttribute('id', 'SubjectQuestion');
+    question2Div.appendChild(question2Select);
+  
+    question2Option1 = document.createElement('option');
+    question2Option1.value = 'oopAssesment';
+    question2Option1.innerHTML = 'OOP-Assesment';
+    question2Select.appendChild(question2Option1);
+  
+    question2Option2 = document.createElement('option');
+    question2Option2.value = 'oopCaseStudy';
+    question2Option2.innerHTML = 'OOP-Case-Study';
+    question2Select.appendChild(question2Option2);
+  
+    verderButton = document.createElement('input');
+    verderButton.type = 'button';
+    verderButton.addEventListener('click', summonInputBar);
+    verderButton.value = 'verder';
+    question2Div.appendChild(verderButton);
+  }else if (blokQuestionOutput == 'Blok3'){
+    popUpP = document.createElement('p');
+    src = document.getElementById('addQuestionsHere');
+    popUpP.innerHTML = 'Kies welk voor welk vak u een cijfer wilt aanpassen';
+    src.appendChild(popUpP);
+  
+    question2Div = document.createElement('div');
+    src.appendChild(question2Div);
+  
+    question2Label = document.createElement('label');
+    question2Div.appendChild(question2Label);
+  
+    question2Select = document.createElement('select');
+    question2Select.name = 'blok';
+    question2Select.classList.add('forms');
+    question2Select.setAttribute('id', 'SubjectQuestion');
+    question2Div.appendChild(question2Select);
+  
+    question2Option1 = document.createElement('option');
+    question2Option1.value = 'fd1CaseStudy';
+    question2Option1.innerHTML = 'FD1-Case-Study';
+    question2Select.appendChild(question2Option1);
+  
+    question2Option2 = document.createElement('option');
+    question2Option2.value = 'fp1Pproject';
+    question2Option2.innerHTML = 'FP1-Project';
+    question2Select.appendChild(question2Option2);
 
-question1Div = document.createElement('div');
-popUpDiv.appendChild(question1Div)
+    question2Option3 = document.createElement('option');
+    question2Option3.value = 'fp1CaseStudy';
+    question2Option3.innerHTML = 'FP1-Case-Study';
+    question2Select.appendChild(question2Option3);
 
-question1Label = document.createElement('label')
-question1Div.appendChild(question1Label);
+    question2Option1 = document.createElement('option');
+    question2Option1.value = 'fp1Assesment';
+    question2Option1.innerHTML = 'FP1-Assessment';
+    question2Select.appendChild(question2Option1);
+  
+    verderButton = document.createElement('input');
+    verderButton.type = 'button';
+    verderButton.addEventListener('click', summonInputBar);
+    verderButton.value = 'verder';
+    question2Div.appendChild(verderButton);
+  }else if (blokQuestionOutput == 'Blok4'){
+    popUpP = document.createElement('p');
+    src = document.getElementById('addQuestionsHere');
+    popUpP.innerHTML = 'Kies welk voor welk vak u een cijfer wilt aanpassen';
+    src.appendChild(popUpP);
+  
+    question2Div = document.createElement('div');
+    src.appendChild(question2Div);
+  
+    question2Label = document.createElement('label');
+    question2Div.appendChild(question2Label);
+  
+    question2Select = document.createElement('select');
+    question2Select.name = 'blok';
+    question2Select.classList.add('forms');
+    question2Select.setAttribute('id', 'SubjectQuestion');
+    question2Div.appendChild(question2Select);
+  
+    question2Option1 = document.createElement('option');
+    question2Option1.value = 'fp2Portfolio';
+    question2Option1.innerHTML = 'FP2-Portfolio';
+    question2Select.appendChild(question2Option1);
+  
+    question2Option2 = document.createElement('option');
+    question2Option2.value = 'fp2Project';
+    question2Option2.innerHTML = 'FP2-Project';
+    question2Select.appendChild(question2Option2);
 
-question1Select.createElement('select')
-question1Div.appendChild(question1Select);
+    question2Option3 = document.createElement('option');
+    question2Option3.value = 'fp2Assessment';
+    question2Option3.innerHTML = 'FP2-Assessment';
+    question2Select.appendChild(question2Option3);
+  
+    verderButton = document.createElement('input');
+    verderButton.type = 'button';
+    verderButton.addEventListener('click', summonInputBar);
+    verderButton.value = 'verder';
+    question2Div.appendChild(verderButton);
+  }else if (blokQuestionOutput == 'Overig'){
+    popUpP = document.createElement('p');
+    src = document.getElementById('addQuestionsHere');
+    popUpP.innerHTML = 'Kies welk voor welk vak u een cijfer wilt aanpassen';
+    src.appendChild(popUpP);
+  
+    question2Div = document.createElement('div');
+    src.appendChild(question2Div);
+  
+    question2Label = document.createElement('label');
+    question2Div.appendChild(question2Label);
+  
+    question2Select = document.createElement('select');
+    question2Select.name = 'blok';
+    question2Select.classList.add('forms');
+    question2Select.setAttribute('id', 'SubjectQuestion');
+    question2Div.appendChild(question2Select);
+  
+    question2Option1 = document.createElement('option');
+    question2Option1.value = 'portfolio';
+    question2Option1.innerHTML = 'Portfolio';
+    question2Select.appendChild(question2Option1);
+  
+    question2Option2 = document.createElement('option');
+    question2Option2.value = 'personality1';
+    question2Option2.innerHTML = 'Personality1';
+    question2Select.appendChild(question2Option2);
 
-question1Option1 = document.createElement('option')
-question1Select.appendChild(question1Option1);
-question1Option2 = document.createElement('option')
-question1Select.appendChild(question1Option2);
-question1Option3 = document.createElement('option')
-question1Select.appendChild(question1Option3);
-question1Option4 = document.createElement('option')
-question1Select.appendChild(question1Option4);
-question1Option5 = document.createElement('option')
-question1Select.appendChild(question1Option5);
+    question2Option3 = document.createElement('option');
+    question2Option3.value = 'personality2';
+    question2Option3.innerHTML = 'Personality2';
+    question2Select.appendChild(question2Option3);
+  
+    verderButton = document.createElement('input');
+    verderButton.type = 'button';
+    verderButton.addEventListener('click', summonInputBar);
+    verderButton.value = 'verder';
+    question2Div.appendChild(verderButton);
+  }
+}
 
+/**
+ * functie die de input van de 2e vraag verwerkt
+ */
+function summonInputBar(){
+  examQuestion = document.getElementById('SubjectQuestion');
+  ExamQuestionOutput = examQuestion.options[examQuestion.selectedIndex].text;
+
+  inputBarDiv = document.createElement('div');
+  src = document.getElementById('addQuestionsHere');
+  inputBarDiv.setAttribute('id','gradeInput');
+  src.appendChild(inputBarDiv);
+
+  inputBarP = document.createElement('p');
+  inputBarP.innerHTML = 'Enter your Grade here';
+  inputBarDiv.appendChild(inputBarP);
+
+  inputBarForm = document.createElement('form');
+  inputBarForm.setAttribute('id','userGradeInputForm');
+  inputBarDiv.appendChild(inputBarForm);
+
+  inputBarLabel = document.createElement('label');
+  inputBarLabel.for = 'Grade';
+  inputBarLabel.innerHTML = 'Grade:';
+  inputBarForm.appendChild(inputBarLabel);
+
+  inputBarInputElement = document.createElement('input');
+  inputBarInputElement.setAttribute('id','UserInputElement');
+  inputBarInputElement.name = 'UserInputElement';
+  inputBarInputElement.type = 'text';
+  inputBarForm.appendChild(inputBarInputElement);
+  
+  inputBarSubmitElement = document.createElement('input');
+  inputBarSubmitElement.value = 'verzenden';
+  inputBarSubmitElement.type = 'button';
+  inputBarSubmitElement.onclick = returnUserGradeInput;
+  inputBarForm.appendChild(inputBarSubmitElement);
+  console.log(UserInputElement);
+  ;}
+/**
+ * Inplements users input
+ */
+function returnUserGradeInput(){
+  userGradeInput = 0;
+  userGradeInput = document.getElementById('UserInputElement').value;
+  console.log(userGradeInput);
+
+  if (ExamQuestionOutput == 'PCO'){
+    schoolYearOne[0].kwartaal[0].course[0].exam[0].grade = userGradeInput;
+    console.log(schoolYearOne[0].kwartaal[0].course[0].exam[0].grade);
+    gradePCO = document.getElementById('pcoGrade');
+    gradePCO.innerHTML = userGradeInput;
+  }else if (ExamQuestionOutput == 'CSB'){
+    schoolYearOne[0].kwartaal[1].course[0].exam[0].grade = userGradeInput;
+    console.log(schoolYearOne[0].kwartaal[1].course[0].exam[0].grade);
+    gradeCSB = document.getElementById('csbGrade');
+    gradeCSB.innerHTML = userGradeInput;
+  }else if (ExamQuestionOutput == 'PBA'){
+    schoolYearOne[0].kwartaal[2].course[0].exam[0].grade = userGradeInput;
+    console.log(schoolYearOne[0].kwartaal[2].course[0].exam[0].grade);
+    gradePBA = document.getElementById('pbaGrade');
+    gradePBA.innerHTML = userGradeInput;
+  }else if (ExamQuestionOutput == 'OOP-Assesment'){
+    schoolYearOne[1].kwartaal[0].course[0].exam[0].grade = userGradeInput;
+    console.log(schoolYearOne[1].kwartaal[0].course[0].exam[0].grade);
+    gradeOopAssessment = document.getElementById('oopAssessmentGrade');
+    gradeOopAssessment.innerHTML = userGradeInput;
+  }else if (ExamQuestionOutput == 'OOP-Case-Study'){
+    schoolYearOne[1].kwartaal[0].course[0].exam[1].grade = userGradeInput;
+    console.log(schoolYearOne[1].kwartaal[0].course[0].exam[1].grade);
+    gradeOopCaseStudy = document.getElementById('oopCaseStudyGrade');
+    gradeOopCaseStudy.innerHTML = userGradeInput;
+  }else if (ExamQuestionOutput == 'FD1-Case-Study'){
+    schoolYearOne[2].kwartaal[0].course[0].exam[0].grade = userGradeInput;
+    console.log(schoolYearOne[2].kwartaal[0].course[0].exam[0].grade);
+    gradefd1 = document.getElementById('fd1Grade');
+    gradefd1.innerHTML = userGradeInput;
+  }else if (ExamQuestionOutput == 'FP1-Project'){
+    schoolYearOne[2].kwartaal[1].course[0].exam[0].grade = userGradeInput;
+    console.log(schoolYearOne[2].kwartaal[1].course[0].exam[0].grade);
+    gradeFp1Project = document.getElementById('fp1ProjectGrade');
+    gradeFd1Project.innerHTML = userGradeInput;
+  }else if (ExamQuestionOutput == 'FP1-Case-Study'){
+    schoolYearOne[2].kwartaal[1].course[0].exam[1].grade = userGradeInput;
+    console.log(schoolYearOne[2].kwartaal[1].course[0].exam[1].grade);
+    gradeFp1CaseStudy = document.getElementById('fp1CaseStudyGrade');
+    gradeFp1CaseStudy.innerHTML = userGradeInput;
+  }else if (ExamQuestionOutput == 'FP1-Assessment'){
+    schoolYearOne[2].kwartaal[1].course[0].exam[2].grade = userGradeInput;
+    console.log(schoolYearOne[2].kwartaal[1].course[0].exam[2].grade);
+    gradeFp1Report = document.getElementById('fp1ReportGrade');
+    gradeFp1Report.innerHTML = userGradeInput;
+  }else if (ExamQuestionOutput == 'FP2-Portfolio'){
+    schoolYearOne[3].kwartaal[0].course[0].exam[0].grade = userGradeInput;
+    console.log(schoolYearOne[3].kwartaal[0].course[0].exam[0].grade);
+    gradeFp2Portfolio = document.getElementById('fp2PortfolioGrade');
+    gradeFp2Portfolio.innerHTML = userGradeInput;
+  }else if (ExamQuestionOutput == 'FP2-Project'){
+    schoolYearOne[3].kwartaal[0].course[0].exam[1].grade = userGradeInput;
+    console.log(schoolYearOne[3].kwartaal[0].course[0].exam[1].grade);
+    gradeFp2Project = document.getElementById('fp2ProjectGrade');
+    gradeFp2Project.innerHTML = userGradeInput;
+  }else if (ExamQuestionOutput == 'FP2-Assessment'){
+    schoolYearOne[3].kwartaal[0].course[0].exam[2].grade = userGradeInput;
+    console.log(schoolYearOne[3].kwartaal[0].course[0].exam[2].grade);
+    gradeFp2Assessment = document.getElementById('fp2AssessmentGrade');
+    gradeFp2Assessment.innerHTML = userGradeInput;
+  }else if (ExamQuestionOutput == 'Portfolio'){
+    schoolYearOne[4].kwartaal[0].course[0].exam[0].grade = userGradeInput;
+    console.log(schoolYearOne[4].kwartaal[0].course[0].exam[0].grade);
+    gradePortfolio = document.getElementById('portfolioGrade');
+    gradePortfolio.innerHTML = userGradeInput;
+  }else if (ExamQuestionOutput == 'Personality1'){
+    schoolYearOne[4].kwartaal[1].course[0].exam[0].grade = userGradeInput;
+    console.log(schoolYearOne[4].kwartaal[1].course[0].exam[0].grade);
+    gradePersonality1 = document.getElementById('ITP1Grade');
+    gradePersonality1.innerHTML = userGradeInput;
+  }else if (ExamQuestionOutput == 'Personality2'){
+    schoolYearOne[4].kwartaal[2].course[0].exam[0].grade = userGradeInput;
+    console.log(schoolYearOne[4].kwartaal[2].course[0].exam[0].grade);
+    gradePersonality2 = document.getElementById('ITP2Grade');
+    gradePersonality2.innerHTML = userGradeInput;
+  }
+};

@@ -239,3 +239,6 @@ iframe {
         text-decoration: none;
         cursor: pointer;
       }
+      .forms {
+        margin-right: 10px;
+      }
