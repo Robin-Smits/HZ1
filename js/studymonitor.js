@@ -1,6 +1,5 @@
 // Prove that JavaScript is working in your browser. You may delete this.
 console.log('JavaScript is working!');
-
 let totalEC = 0;
 let myTotalEC = 0;
 let myEc = 0;
@@ -212,7 +211,7 @@ function calculateMyEc(array) {
       for (k = 0; k < schoolYearOne[i].kwartaal[j].course.length; k++) {
         for (l = 0; l < schoolYearOne[i].kwartaal[j].course[k].exam.length; l++) {
           totalEC += schoolYearOne[i].kwartaal[j].course[k].exam[l].weight;
-          //console.log(`your Course= ${schoolYearOne[i].kwartaal[j].course[k].name}, your name= ${schoolYearOne[i].kwartaal[j].course[k].exam[l].name}& your weight =${schoolYearOne[i].kwartaal[j].course[k].exam[l].weight} & `);
+          
           if (schoolYearOne[i].kwartaal[j].course[k].exam[l].grade >= 5.5) {
             myTotalEC += schoolYearOne[i].kwartaal[j].course[k].exam[l].weight;
           }
@@ -220,8 +219,6 @@ function calculateMyEc(array) {
       }
     }
   }
-  //console.log(totalEC);
-  //console.log(myTotalEC);
   return myTotalEC;
 }
 myTotalEC = calculateMyEc(schoolYearOne);
@@ -444,4 +441,85 @@ function makeSubExam (examEC, examTest, CourseGradeID, voltooidToetsID){
   td6.setAttribute('id',voltooidToetsID); // ID: voltooidToetsID
   tr.appendChild(td6);
 }
+/**
+ * Creates the button to change the table
+ */
+function createChangeButton(){
+  inputButton = document.createElement('button');
+  src = document.getElementById('changeButton');
+  inputButton.setAttribute('id','popUpButton');
+  inputButton.innerHTML = 'Change grades';
+  src.appendChild(inputButton);
+}
+/**
+ * creates the pop up where you can change the table
+ */
+function createPopUp(){
+  popUp = document.createElement('div');
+  src = document.getElementById('changeButton');
+  popUp.setAttribute('id','openPopUp');
+  popUp.classList.add('popUp');
+  src.appendChild(popUp);
+
+  popUpDiv = document.createElement('div');
+  popUpDiv.classList.add('popUp-inhoud');
+  popUp.appendChild(popUpDiv);
+  popUpSpan = document.createElement('span');
+  popUpSpan.innerHTML = '&times;';
+  popUpSpan.classList.add('popUp-sluiten');
+  popUpDiv.appendChild(popUpSpan);
+
+  popUpP = document.createElement('p');
+  popUpP.innerHTML = 'Hallo';
+  popUpDiv.appendChild(popUpP);
+};
+  
+createChangeButton();
+createPopUp();
+
+popUpMenu = document.getElementById('openPopUp');
+popUpButton = document.getElementById('popUpButton');
+popUpMenuContent = document.getElementsByClassName('popUp-sluiten')[0];
+
+popUpButton.onclick = function() {
+  popUpMenu.style.display = 'block';
+};
+
+popUpMenuContent.onclick = function() {
+  popUpMenu.style.display = 'none';
+};
+
+window.onclick = function(event) {
+  if (event.target == popUpMenu) {
+    popUpMenu.style.display = 'none';
+  }
+};
+
+<label for="cars">Choose a car:</label>
+<select name="cars" id="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select>
+
+question1Div = document.createElement('div');
+popUpDiv.appendChild(question1Div)
+
+question1Label = document.createElement('label')
+question1Div.appendChild(question1Label);
+
+question1Select.createElement('select')
+question1Div.appendChild(question1Select);
+
+question1Option1 = document.createElement('option')
+question1Select.appendChild(question1Option1);
+question1Option2 = document.createElement('option')
+question1Select.appendChild(question1Option2);
+question1Option3 = document.createElement('option')
+question1Select.appendChild(question1Option3);
+question1Option4 = document.createElement('option')
+question1Select.appendChild(question1Option4);
+question1Option5 = document.createElement('option')
+question1Select.appendChild(question1Option5);
 
